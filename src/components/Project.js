@@ -17,7 +17,6 @@ const ProjectStyles = styled.div`
 
   @media (max-width: ${({ theme }) => theme.queries.m}) {
     flex-basis: 100%;
-    margin-bottom: 3rem;
   }
 
   .project-detail {
