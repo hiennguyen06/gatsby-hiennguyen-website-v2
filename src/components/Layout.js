@@ -2,7 +2,14 @@ import React, { useState } from "react"
 import "normalize.css"
 import { ThemeProvider } from "styled-components"
 import { GlobalStyles } from "../styles/globalStyles"
-import Header from "./Header"
+import Footer from "../components/Footer"
+import Header from "../components/Header"
+import MobileNav from "./MobileNav"
+
+if (typeof window !== "undefined") {
+  // eslint-disable-next-line global-require
+  require("smooth-scroll")('a[href*="#"]')
+}
 
 const theme = {
   colors: {
@@ -11,7 +18,7 @@ const theme = {
     green: "#204D46",
     orange: "#cf2d02",
     white: "#fff",
-    grey: "#ededed",
+    grey: "#959a9e",
   },
   queries: {
     xs: "400px",
@@ -34,7 +41,10 @@ const Layout = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
+      <Header handleMobileNav={handleMobileNav} mobileNav={mobileNav} />
+      <MobileNav handleMobileNav={handleMobileNav} mobileNav={mobileNav} />
       {children}
+      <Footer />
     </ThemeProvider>
   )
 }

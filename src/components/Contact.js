@@ -1,0 +1,61 @@
+import React from "react"
+import styled from "styled-components"
+import { Container } from "../styles/globalStyles"
+
+const ContactStyles = styled.div`
+  padding: 12rem 0;
+  width: 100%;
+  height: 70vh;
+  background: ${({ theme }) => theme.colors.orange};
+  color: ${({ theme }) => theme.colors.white};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .inner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    p {
+      width: 50%;
+      font-size: 3.2rem;
+      font-weight: 400;
+      text-align: center;
+      line-height: 1.2;
+
+      @media (max-width: ${({ theme }) => theme.queries.m}) {
+        width: 100%;
+      }
+      @media (max-width: ${({ theme }) => theme.queries.s}) {
+        font-size: 2.4rem;
+      }
+    }
+    a {
+      border-bottom: 1px solid;
+    }
+  }
+`
+
+const Contact = () => {
+  return (
+    <ContactStyles id="contact">
+      <Container nonFluid>
+        <div className="inner">
+          <p>
+            I’m always looking for new opportunities to learn and collaborate.
+            Please{" "}
+            <a
+              href="mailto:info@hiennguyen.com.au"
+              target="_blank"
+              rel="noreferrer"
+            >
+              get in touch.
+            </a>
+          </p>
+        </div>
+      </Container>
+    </ContactStyles>
+  )
+}
+
+export default Contact

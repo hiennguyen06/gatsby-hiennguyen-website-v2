@@ -1,20 +1,20 @@
 import React from "react"
 import styled from "styled-components"
-import { Link } from "gatsby"
 
 const MobileNavStyles = styled.div`
   position: fixed;
   top: 0;
-  left: 0;
-  z-index: 99;
-  width: 100%;
-  height: 100%;
-  background: #cf2d02;
-  color: #fff;
+  bottom: 0;
+  z-index: 10000;
+  background: #fff;
+  color: ${({ theme }) => theme.colors.orange};
   opacity: ${({ mobileNav }) => (mobileNav ? "1" : "0")};
   pointer-events: ${({ mobileNav }) => (mobileNav ? "auto" : "none")};
   transition: all 0.3s ease;
-  text-align: center;
+
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
 
   .mobileNav-container {
     height: 100%;
@@ -36,51 +36,42 @@ const MobileNavStyles = styled.div`
           margin-bottom: 1.6rem;
         }
       }
-      .mobile-social-links {
-        display: flex;
-        justify-content: space-evenly;
-        margin-bottom: 1.5rem;
-        li {
-          font-size: 1.6rem;
-        }
+
+      .btn-close {
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        color: ${({ theme }) => theme.colors.orange};
       }
     }
   }
 `
 
-const MobileNav = ({ mobileNav }) => {
+const MobileNav = ({ mobileNav, handleMobileNav }) => {
   return (
     <MobileNavStyles mobileNav={mobileNav}>
       <div className="mobileNav-container">
         <div className="mobileNav-inner">
           <ul className="mobile-nav-links">
             <li>
-              <Link to="/">About</Link>
+              <a role="button" href="/#about" onClick={handleMobileNav}>
+                About
+              </a>
             </li>
             <li>
-              <Link to="/">Projects</Link>
+              <a role="button" href="/#projects" onClick={handleMobileNav}>
+                Projects
+              </a>
             </li>
             <li>
-              <Link to="/">Experience</Link>
-            </li>
-            <li>
-              <Link to="/">Resume</Link>
+              <a role="button" href="/#contact" onClick={handleMobileNav}>
+                Contact
+              </a>
             </li>
           </ul>
-          <ul className="mobile-social-links">
-            <li>
-              <a href="/">Email</a>
-            </li>
-            <li>
-              <a href="/">LinkedIn</a>
-            </li>
-            <li>
-              <a href="/">Github</a>
-            </li>
-            <li>
-              <a href="/">Instagram</a>
-            </li>
-          </ul>
+          <button onClick={handleMobileNav} className="btn-close">
+            Close
+          </button>
         </div>
       </div>
     </MobileNavStyles>

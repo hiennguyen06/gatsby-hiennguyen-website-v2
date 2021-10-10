@@ -3,8 +3,17 @@ import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const ProjectStyles = styled.div`
-  flex-basis: ${({ layout }) => layout || "45%"};
-  margin: 6rem auto;
+  flex-basis: calc(50% - 15px);
+  margin: 0 0 6rem 0;
+
+  .gatsby-image-wrapper {
+    img {
+      transition: all 0.3s ease-out;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
 
   @media (max-width: ${({ theme }) => theme.queries.m}) {
     flex-basis: 100%;
@@ -12,35 +21,41 @@ const ProjectStyles = styled.div`
   }
 
   .project-detail {
-    max-width: 500px;
+    max-width: 300px;
     margin: 1.6rem 0 0.8rem 0;
+    p {
+      font-weight: 300;
+    }
   }
 
   .tech-tag {
-    border: 1px solid rgb(189, 189, 189);
-    border-radius: 100px;
-    padding: 0px 8px;
+    text-transform: uppercase;
+    color: ${({ theme }) => theme.colors.grey};
     font-size: 12px;
     margin: 0 6px 0 0;
   }
 `
 
-const Project = ({ project, index }) => {
-  console.log(project)
+const Project = ({ project }) => {
   const image = getImage(project.screenshot)
   return (
-    <ProjectStyles layout={index % 3 === 0 && "100%"}>
+    <ProjectStyles>
       <a href={`${project.url}`} target="_blank" rel="noreferrer">
         <GatsbyImage image={image} alt={project.name} />
       </a>
       <a href={`${project.url}`} target="_blank" rel="noreferrer">
         <div className="project-detail">
-          <strong>{project.name}</strong>: {project.description}
+          <h3>{project.name}</h3>
+          <p>{project.description}</p>
         </div>
       </a>
       <div>
-        {project.builtWith.map(tag => {
-          return <span className="tech-tag">{tag}</span>
+        {project.builtWith.map((tag, index) => {
+          return (
+            <span key={index} className="tech-tag">
+              {tag}
+            </span>
+          )
         })}
       </div>
     </ProjectStyles>

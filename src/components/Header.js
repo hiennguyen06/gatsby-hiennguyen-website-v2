@@ -7,14 +7,14 @@ const HeaderStyles = styled.div`
   padding: 1.5rem 0;
   width: 100%;
   background: transparent;
-  position: fixed;
+  position: absolute;
   top: 0;
-  left: 0;
+
   z-index: 10;
-  color: ${({ theme }) => theme.colors.white};
+  color: ${({ theme }) => theme.colors.orange};
 
   .btn-menu {
-    color: ${({ theme }) => theme.colors.white};
+    color: ${({ theme }) => theme.colors.orange};
     display: none;
 
     @media (max-width: ${({ theme }) => theme.queries.m}) {
@@ -44,7 +44,7 @@ const Nav = styled.nav`
 
 const Logo = styled.span`
   font-size: 1.6rem;
-  color: ${({ theme }) => theme.colors.white};
+  color: ${({ theme }) => theme.colors.orange};
 `
 
 const Header = ({ mobileNav, handleMobileNav }) => {
@@ -57,20 +57,17 @@ const Header = ({ mobileNav, handleMobileNav }) => {
           </Logo>
           <ul>
             <li>
-              <Link to="/">About</Link>
+              <a href="/#about">About</a>
             </li>
             <li>
-              <Link to="/">Projects</Link>
+              <a href="/#projects">Projects</a>
             </li>
             <li>
-              <Link to="/">Experience</Link>
-            </li>
-            <li>
-              <Link to="/">Resume</Link>
+              <a href="/#footer">Contact</a>
             </li>
           </ul>
           <button onClick={handleMobileNav} className="btn-menu">
-            {mobileNav ? "Close" : "Menu"}
+            Menu
           </button>
         </Nav>
       </Container>

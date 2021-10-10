@@ -15,10 +15,17 @@ const HeroStyles = styled.div`
   z-index: 1;
 
   div {
-    max-width: 500px;
-    span {
-      font-size: 3.2rem;
-
+    max-width: 600px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p {
+      font-size: 4.8rem;
+      font-weight: 400;
+      text-align: center;
+      line-height: 1.2;
+      color: ${({ theme }) => theme.colors.orange};
       @media (max-width: ${({ theme }) => theme.queries.s}) {
         font-size: 3.2rem;
       }
@@ -29,7 +36,13 @@ const HeroStyles = styled.div`
 const Hero = () => {
   return (
     <HeroStyles>
-      <Container></Container>
+      <Container>
+        <div>
+          <p>
+            Hi I'm Hien. I'm learning to build joyful experiences for the web.
+          </p>
+        </div>
+      </Container>
     </HeroStyles>
   )
 }

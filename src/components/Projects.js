@@ -23,10 +23,6 @@ export const query = graphql`
 
 const ProjectsStyles = styled.div`
   padding: 12rem 0 6rem 0;
-  background: #fff;
-  position: sticky;
-  top: 0px;
-  z-index: 1;
   @media (max-width: ${({ theme }) => theme.queries.m}) {
     padding: 3rem 0;
   }
@@ -34,7 +30,7 @@ const ProjectsStyles = styled.div`
 
 const ProjectsInner = styled.div`
   display: flex;
-  justify-content: ${({ layout }) => layout || "space-between"};
+  justify-content: space-between;
   flex-wrap: wrap;
 `
 
@@ -43,8 +39,9 @@ const Projects = () => {
   const projects = data.allContentfulProject.nodes
 
   return (
-    <ProjectsStyles>
+    <ProjectsStyles id="projects">
       <Container nonFluid>
+        <h2>Selected Projects.</h2>
         <ProjectsInner>
           {projects.map((project, index) => {
             return <Project key={project.id} project={project} index={index} />

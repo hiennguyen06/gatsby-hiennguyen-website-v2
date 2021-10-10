@@ -29,7 +29,7 @@ export const GlobalStyles = createGlobalStyle`
         font-size: 1.6rem;
         line-height: 1.4;
         letter-spacing: -0.1px;
-        color: ${({ theme }) => theme.colors.navy};
+        color: ${({ theme }) => theme.colors.black};
 
     }
 
@@ -40,15 +40,21 @@ export const GlobalStyles = createGlobalStyle`
 
     h2 {
         font-size: 3.2rem;
-        margin-bottom: 1.6rem;
+        margin-bottom: 3.2rem;
 
         @media (max-width: ${({ theme }) => theme.queries.m}) {
             font-size: 2.4rem;
       }
     }
 
-    p {
+    h3 {
+        text-transform: uppercase;
         font-size: 1.6rem;
+        margin-bottom: 0.8rem;
+    }
+
+    p {
+        font-size: 1.8rem;
     }
 
     a {
