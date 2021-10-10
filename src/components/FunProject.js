@@ -42,19 +42,6 @@ const FunProjectStyles = styled.li`
 
   .detail {
     height: ${({ showAccordian }) => (showAccordian ? "auto" : "0")};
-
-    /* @media (max-width: ${({ theme }) => theme.queries.l}) {
-      height: ${({ showAccordian }) => (showAccordian ? "330px" : "0")};
-    }
-
-    @media (max-width: ${({ theme }) => theme.queries.m}) {
-      height: ${({ showAccordian }) => (showAccordian ? "825px" : "0")};
-    }
-
-    @media (max-width: ${({ theme }) => theme.queries.s}) {
-      height: ${({ showAccordian }) => (showAccordian ? "720px" : "0")};
-    } */
-
     overflow: hidden;
     transition: all 0.4s ease-out;
 

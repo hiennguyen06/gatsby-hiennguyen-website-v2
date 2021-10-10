@@ -36,8 +36,6 @@ const Layout = ({ children }) => {
     setMobileNav(!mobileNav)
   }
 
-  console.log(mobileNav)
-
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />

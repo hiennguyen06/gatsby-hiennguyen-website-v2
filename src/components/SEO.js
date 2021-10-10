@@ -5,7 +5,6 @@ import { graphql, useStaticQuery } from "gatsby"
 const SEO = ({ title, description }) => {
   const data = useStaticQuery(query)
   const metaDescription = description || data.site.siteMetadata.description
-  console.log(data)
   return (
     <Helmet
       htmlAttributes={{ lang: "en" }}
