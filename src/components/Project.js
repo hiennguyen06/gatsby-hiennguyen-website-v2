@@ -4,7 +4,10 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const ProjectStyles = styled.div`
   flex-basis: calc(50% - 15px);
-  margin: 0 0 6rem 0;
+
+  &:not(:last-child) {
+    margin: 0 0 6rem 0;
+  }
 
   .gatsby-image-wrapper {
     img {
