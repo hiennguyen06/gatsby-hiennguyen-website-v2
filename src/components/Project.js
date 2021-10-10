@@ -28,6 +28,10 @@ const ProjectStyles = styled.div`
     p {
       font-weight: 300;
     }
+
+    @media (max-width: ${({ theme }) => theme.queries.m}) {
+      max-width: 100%;
+    }
   }
 
   .tech-tag {
