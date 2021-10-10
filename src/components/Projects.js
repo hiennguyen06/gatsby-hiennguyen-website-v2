@@ -24,7 +24,7 @@ export const query = graphql`
 const ProjectsStyles = styled.div`
   padding: 12rem 0 6rem 0;
   @media (max-width: ${({ theme }) => theme.queries.m}) {
-    padding: 3rem 0;
+    padding: 6rem 0 12rem 0;
   }
 `
 

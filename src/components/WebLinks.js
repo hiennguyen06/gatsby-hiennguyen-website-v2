@@ -7,7 +7,7 @@ const WebLinksStyles = styled.div`
   padding: 12rem 0 12rem 0;
 
   @media (max-width: ${({ theme }) => theme.queries.m}) {
-    padding: 6rem 0 6rem 0;
+    padding: 12rem 0 12rem 0;
   }
 
   .inner-container {
