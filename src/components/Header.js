@@ -38,6 +38,19 @@ const Nav = styled.nav`
 
     li {
       margin-left: 2.4rem;
+      padding-bottom: 8px;
+      &:after {
+        display: block;
+        content: "";
+        border-bottom: solid 1px ${({ theme }) => theme.colors.orange};
+        transform: scaleX(0);
+        transform-origin: 100% 50%;
+        transition: transform 0.3s ease-in-out;
+      }
+      &:hover:after {
+        transform: scaleX(1);
+        transform-origin: 0% 50%;
+      }
     }
   }
 `
@@ -45,6 +58,18 @@ const Nav = styled.nav`
 const Logo = styled.span`
   font-size: 1.8rem;
   color: ${({ theme }) => theme.colors.orange};
+  &:after {
+    display: block;
+    content: "";
+    border-bottom: solid 1px ${({ theme }) => theme.colors.orange};
+    transform: scaleX(0);
+    transform-origin: 100% 50%;
+    transition: transform 0.3s ease-in-out;
+  }
+  &:hover:after {
+    transform: scaleX(1);
+    transform-origin: 0% 50%;
+  }
 `
 
 const Header = ({ mobileNav, handleMobileNav }) => {
@@ -64,6 +89,7 @@ const Header = ({ mobileNav, handleMobileNav }) => {
             </li>
             <li>
               <a href="/#footer">Contact</a>
+              <div className="animated-line"></div>
             </li>
           </ul>
           <button onClick={handleMobileNav} className="btn-menu">

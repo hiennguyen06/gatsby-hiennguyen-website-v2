@@ -37,6 +37,11 @@ const ContactStyles = styled.div`
     }
     a {
       border-bottom: 1px solid;
+      transition: transform 0.3s ease-in-out;
+
+      &:hover {
+        border: none;
+      }
     }
   }
 `

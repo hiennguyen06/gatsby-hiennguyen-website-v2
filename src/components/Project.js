@@ -52,7 +52,7 @@ const Project = ({ project }) => {
       </a>
       <a href={`${project.url}`} target="_blank" rel="noreferrer">
         <div className="project-detail">
-          <h3>{project.name}</h3>
+          <h3 className="project-name">{project.name}</h3>
           <p>{project.description}</p>
         </div>
       </a>

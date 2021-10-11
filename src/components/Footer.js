@@ -38,6 +38,18 @@ const FooterStyles = styled.div`
       &:not(:last-child) {
         margin-right: 2rem;
       }
+      &:after {
+        display: block;
+        content: "";
+        border-bottom: solid 1px ${({ theme }) => theme.colors.white};
+        transform: scaleX(0);
+        transform-origin: 100% 50%;
+        transition: transform 0.3s ease-in-out;
+      }
+      &:hover:after {
+        transform: scaleX(1);
+        transform-origin: 0% 50%;
+      }
     }
   }
 `
