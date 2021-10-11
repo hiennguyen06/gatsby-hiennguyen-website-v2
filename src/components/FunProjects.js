@@ -5,7 +5,7 @@ import FunProject from "./FunProject"
 import { graphql, useStaticQuery } from "gatsby"
 
 const FunProjectsStyles = styled.div`
-  background: ${({ theme }) => theme.colors.grey};
+  background: ${({ theme }) => theme.colors.lightGrey};
   color: ${({ theme }) => theme.colors.black};
   padding: 6rem 0 6rem 0;
 `

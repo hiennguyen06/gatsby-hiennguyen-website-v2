@@ -20,12 +20,13 @@ const ContactStyles = styled.div`
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
     p {
-      width: 50%;
+      width: 60%;
       font-size: 3.2rem;
       font-weight: 400;
       text-align: center;
-      line-height: 1.2;
 
       @media (max-width: ${({ theme }) => theme.queries.m}) {
         width: 100%;
@@ -47,13 +48,14 @@ const Contact = () => {
         <div className="inner">
           <p>
             I’m always looking for new opportunities to learn and collaborate.
-            Please{" "}
+          </p>
+          <p>
             <a
               href="mailto:info@hiennguyen.com.au"
               target="_blank"
               rel="noreferrer"
             >
-              get in touch.
+              Get in touch.
             </a>
           </p>
         </div>

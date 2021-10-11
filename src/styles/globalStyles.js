@@ -27,8 +27,8 @@ export const GlobalStyles = createGlobalStyle`
         overflow-x: hidden;
         font-weight: 400;
         font-size: 1.6rem;
-        line-height: 1.4;
-        letter-spacing: -0.1px;
+        line-height: 1.2;
+        letter-spacing: -0px;
         color: ${({ theme }) => theme.colors.black};
 
     }
@@ -40,7 +40,7 @@ export const GlobalStyles = createGlobalStyle`
 
     h2 {
         font-size: 3.2rem;
-        margin-bottom: 3.2rem;
+        margin-bottom: 1.6rem;
 
         @media (max-width: ${({ theme }) => theme.queries.m}) {
             font-size: 2.4rem;

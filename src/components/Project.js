@@ -23,7 +23,7 @@ const ProjectStyles = styled.div`
   }
 
   .project-detail {
-    max-width: 300px;
+    width: 80%;
     margin: 1.6rem 0 0.8rem 0;
     p {
       font-weight: 300;
@@ -38,7 +38,6 @@ const ProjectStyles = styled.div`
     text-transform: uppercase;
     color: ${({ theme }) => theme.colors.grey};
     font-size: 12px;
-    margin: 0 6px 0 0;
   }
 `
 

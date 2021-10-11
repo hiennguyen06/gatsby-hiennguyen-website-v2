@@ -9,7 +9,7 @@ const HeaderStyles = styled.div`
   background: transparent;
   position: absolute;
   top: 0;
-
+  font-size: 1.8rem;
   z-index: 10;
   color: ${({ theme }) => theme.colors.orange};
 
@@ -43,7 +43,7 @@ const Nav = styled.nav`
 `
 
 const Logo = styled.span`
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   color: ${({ theme }) => theme.colors.orange};
 `
 

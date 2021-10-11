@@ -54,7 +54,6 @@ const HomeAboutStyles = styled.div`
       }
 
       p {
-        margin-bottom: 0rem;
         font-size: 1.6rem;
       }
 

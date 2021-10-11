@@ -8,7 +8,7 @@ const FooterStyles = styled.div`
   top: 0px;
   z-index: 1;
   font-weight: 300;
-  padding: 2rem;
+  padding: 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
