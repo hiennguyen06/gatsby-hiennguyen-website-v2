@@ -44,6 +44,8 @@ const ProjectStyles = styled.div`
 
 const Project = ({ project }) => {
   const image = getImage(project.screenshot)
+  const joinBuiltWith = project.builtWith.join([" - "])
+
   return (
     <ProjectStyles>
       <a href={`${project.url}`} target="_blank" rel="noreferrer">
@@ -56,13 +58,7 @@ const Project = ({ project }) => {
         </div>
       </a>
       <div>
-        {project.builtWith.map((tag, index) => {
-          return (
-            <span key={index} className="tech-tag">
-              {tag}
-            </span>
-          )
-        })}
+        <span className="tech-tag">{joinBuiltWith}</span>
       </div>
     </ProjectStyles>
   )
