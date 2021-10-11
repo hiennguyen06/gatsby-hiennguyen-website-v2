@@ -5,9 +5,9 @@ import FunProject from "./FunProject"
 import { graphql, useStaticQuery } from "gatsby"
 
 const FunProjectsStyles = styled.div`
-  background: ${({ theme }) => theme.colors.white};
+  background: ${({ theme }) => theme.colors.grey};
   color: ${({ theme }) => theme.colors.black};
-  padding: 0rem 0 0rem 0;
+  padding: 6rem 0 6rem 0;
 `
 
 export const query = graphql`

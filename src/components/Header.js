@@ -4,7 +4,7 @@ import { Container } from "../styles/globalStyles"
 import { Link } from "gatsby"
 
 const HeaderStyles = styled.div`
-  padding: 1.5rem 0;
+  padding: 3rem 0;
   width: 100%;
   background: transparent;
   position: absolute;

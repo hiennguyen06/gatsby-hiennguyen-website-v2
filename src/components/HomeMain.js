@@ -10,8 +10,8 @@ const HomeMainStyles = styled.div`
   padding: 0rem 0 0rem 0;
   background: ${({ theme }) => theme.colors.white};
   position: sticky;
-  top: 0px;
-  z-index: 1;
+  bottom: top;
+  z-index: 2;
 `
 
 const HomeMain = () => {

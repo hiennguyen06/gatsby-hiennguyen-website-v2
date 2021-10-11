@@ -70,7 +70,7 @@ const Footer = () => {
           </li>
           <li>
             <a
-              href="https://www.linkedin.com/in/hien-nguyen06/"
+              href="https://github.com/hiennguyen06"
               target="_blank"
               rel="noreferrer"
             >

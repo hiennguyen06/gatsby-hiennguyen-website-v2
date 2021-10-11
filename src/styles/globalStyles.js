@@ -55,6 +55,7 @@ export const GlobalStyles = createGlobalStyle`
 
     p {
         font-size: 1.8rem;
+        line-height: 1.4;
     }
 
     a {

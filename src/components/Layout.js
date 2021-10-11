@@ -18,7 +18,7 @@ const theme = {
     green: "#204D46",
     orange: "#cf2d02",
     white: "#fff",
-    grey: "#959a9e",
+    grey: "#f8f8ff",
   },
   queries: {
     xs: "400px",

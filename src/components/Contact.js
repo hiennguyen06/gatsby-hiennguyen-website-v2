@@ -5,7 +5,11 @@ import { Container } from "../styles/globalStyles"
 const ContactStyles = styled.div`
   padding: 12rem 0;
   width: 100%;
-  height: 70vh;
+  height: 60vh;
+
+  @media (min-width: 1600px) {
+    height: 80vh;
+  }
   background: ${({ theme }) => theme.colors.orange};
   color: ${({ theme }) => theme.colors.white};
   display: flex;
